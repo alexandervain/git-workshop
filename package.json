@@ -5,6 +5,10 @@
   "bin": {
     "gw": "bin/cli.js"
   },
+  "files": [
+    "dist",
+    "bin"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest"
