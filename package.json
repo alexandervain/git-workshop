@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": ":"
+    "test": "jest"
   },
   "engines": {
     "node": ">=14.0.0"

@@ -1,6 +1,7 @@
 # Git workshop
 This is a Git workshop to learn a practice basic git commands and features.
 The workshop consists of a few exercides that targeting a specific git feature(s).
+Run `gw` to print details and instructions.
 
 ## Flow
 Each excersise consists of 2 parts: 
@@ -25,23 +26,3 @@ There are also a few other commands available:
     - if any test has failed, you can apply the missing parts and run `gw check N` again when ready
     - you can run `gw restart N` to re-start the whole step over (you will lost any of yur changes)
 - No need to run the clean action when moving to the next exersice
-
-## Excercise
-A detailed description of each excercise will be printed by the `gw-run exN` command.
-
-Exacercises topics:
-1. Git repo initialization and commits
-2. Git log
-2. .gitignore
-2. Amend last commit
-4. Changing commit messages
-3. Unite (squash) commits with preserving commit messages
-4. Unite (fixup) commits without preserving commit messages
-5. Re-organize commits (interfactive rebase)
-5. Delete commits (interfactive rebase)
-6. Reset
-7. Checkout commit
-7. _Checrry pick_
-6. _Rebase from other branch_
-7. _Merge from other branch_
-8. _Setting remote repositories_

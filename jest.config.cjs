@@ -2,7 +2,6 @@ module.exports = {
   collectCoverage: false,
   displayName: "Git Workshop",
   errorOnDeprecated: true,
-  reporters: ["jest-standard-reporter"],
   slowTestThreshold: 10,
   testEnvironment: "node",
   testMatch: ["**/?(*.)+(spec|test|it|e2e).[jt]s?(x)"],
