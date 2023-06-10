@@ -18,7 +18,7 @@ export function factory(baseContext: ExcerciseContext): Excercise {
     context,
     topic:
       `Sometimes we want to change last commit because we forgot to commit one of the changes we just want to add another change to the same commit\n` +
-      `Git allows to do so easily using option[--amend ] option. This option will update the last commit with the current changes.\n` +
+      `Git allows to do so easily using opt[--amend ] option. This option will update the last commit with the current changes.\n` +
       `${REBASING_WARNING}`,
     description: `Repo has a single branch "${context.targetBranchName}" with a single commit with a message msg["${context.originalMessage}"]. You will need to amend this commit.`,
     tldr: "amend last commit",
