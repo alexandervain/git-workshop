@@ -4,7 +4,7 @@ import type { ExcerciseTask } from "../ExcerciseTask";
 import type { Hint, TaskResult, TaskSolution } from "../utils";
 import type { Exercise1Context } from "./types";
 
-const TARGET_BRANCH_NAME = "main";
+const TARGET_BRANCH_NAME = "ex1";
 
 export class RenameTask implements ExcerciseTask {
   public constructor(private readonly context: Exercise1Context) {}
@@ -24,8 +24,8 @@ export class RenameTask implements ExcerciseTask {
   public get solutions(): TaskSolution[] {
     return [
       {
-        command: "git branch -m main",
-        description: `Renames the current branch to the provided name ("main" in this case)`,
+        command: `git branch -m ${TARGET_BRANCH_NAME}`,
+        description: `Renames the current branch to the provided name ("${TARGET_BRANCH_NAME}" in this case)`,
       },
     ];
   }
