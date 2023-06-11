@@ -1,6 +1,6 @@
 {
   "name": "git-workshop",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Git commands workshop",
   "repository": {
     "type": "git",
@@ -15,9 +15,11 @@
     "bin"
   ],
   "scripts": {
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run tsc",
+    "tsc": "tsc",
     "test": "jest",
-    "publish": "npm run build && npm publish"
+    "pub": "npm run build && npm publish"
   },
   "engines": {
     "node": ">=14.0.0"
