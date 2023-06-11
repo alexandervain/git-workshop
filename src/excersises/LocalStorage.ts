@@ -3,7 +3,7 @@ import path from "node:path";
 
 import { exists } from "./utils";
 
-const STORAGE_FOLDER = ".workshop";
+export const STORAGE_FOLDER = ".workshop";
 const STORAGE_FILE = "store";
 
 export class LocalStorage {

@@ -146,7 +146,7 @@ export class Excercise {
 
   public printDescription(): void {
     const commonDescriptopn = `The working folder for this excercise is fs[${
-      this.folderName
+      this.folderPath
     }].${
       this.config.initializedGitRepo !== false
         ? " It is a root of a git repo."

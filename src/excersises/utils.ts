@@ -1,4 +1,5 @@
 import chalk from "chalk";
+import { existsSync } from "node:fs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import type { CommitResult, Response, SimpleGit } from "simple-git";
@@ -6,7 +7,7 @@ import tLink from "terminal-link";
 
 import type { ExcerciseContext } from "./Excercise";
 import { format, TAGS } from "./format";
-import { LocalStorage } from "./LocalStorage";
+import { LocalStorage, STORAGE_FOLDER } from "./LocalStorage";
 
 const ARROW = "\u2192";
 const CHECK_MARK = "\u2705";
@@ -152,9 +153,18 @@ export async function exists(folderPath: string): Promise<boolean> {
     .catch(() => false);
 }
 
+const EX_FOLDER_NAME_PATTERN = /ex\d+/u;
+function determineBaseFolder(): string {
+  const cwd = process.cwd();
+  return EX_FOLDER_NAME_PATTERN.test(path.basename(cwd)) &&
+    existsSync(path.join(cwd, STORAGE_FOLDER))
+    ? path.join(cwd, "..")
+    : cwd;
+}
+
 export function createContext(id: number | string): ExcerciseContext {
   const folderName = `ex${id}`;
-  const folderPath = path.join(process.cwd(), folderName);
+  const folderPath = path.join(determineBaseFolder(), folderName);
   return {
     id: id.toString(),
     folderName,

@@ -1,6 +1,6 @@
 {
   "name": "git-workshop",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Git commands workshop",
   "bin": {
     "gw": "bin/cli.js"
