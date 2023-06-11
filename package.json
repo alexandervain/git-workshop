@@ -16,7 +16,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "publish": "npm run build && npm publish"
   },
   "engines": {
     "node": ">=14.0.0"
