@@ -13,7 +13,7 @@ const ARROW = "\u2192";
 const CHECK_MARK = "\u2705";
 const CROSS_MARK = "\u274c";
 
-export const REBASING_WARNING = `nb[This is a italic[rebasing] operation - it changes history (commit hashs) - be aware!]`;
+export const REBASING_WARNING = `nb[This is a rebasing operation - it changes history (commit hashs) - be aware!]`;
 
 export interface Hint {
   description?: string;

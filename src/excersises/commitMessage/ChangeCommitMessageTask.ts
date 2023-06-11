@@ -9,7 +9,7 @@ export class ChangeCommitMessageTask implements ExcerciseTask {
   public constructor(private readonly context: Exercise3Context) {}
 
   public get description(): string {
-    return `change last commit message to bold[${this.context.expectedMessage}]`;
+    return `change last commit message to bld[${this.context.expectedMessage}]`;
   }
 
   public readonly afterNotes = [

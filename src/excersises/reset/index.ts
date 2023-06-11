@@ -5,8 +5,8 @@ import { ResetSoftTask } from "./ResetSoftTask";
 
 function factory(context: ExcerciseContext, soft: boolean): Excercise {
   const text = soft
-    ? `- cmd[git reset --sort HEAD~N] to set the HEAD pointer to sv[N] commits back (N could be 0) bold[without changing the file system state]`
-    : `- cmd[git reset --hard HEAD~N] to set the HEAD pointer to sv[N] commits back (N could be 0) and bold[change the file system state as it was on that commit]`;
+    ? `- cmd[git reset --sort HEAD~N] to set the HEAD pointer to sv[N] commits back (N could be 0) bld[without changing the file system state]`
+    : `- cmd[git reset --hard HEAD~N] to set the HEAD pointer to sv[N] commits back (N could be 0) and bld[change the file system state as it was on that commit]`;
 
   const opt = soft ? "soft" : "hard";
   return new Excercise({

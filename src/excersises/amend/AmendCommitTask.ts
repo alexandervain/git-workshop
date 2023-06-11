@@ -12,7 +12,7 @@ export class AmendCommitTask implements ExcerciseTask {
 
   public get description(): string {
     return (
-      `commit it to Git bold[amending] the existing commit italic[(that is, "adding" this change to the existing commit)]\n` +
+      `commit it to Git bld[amending] the existing commit italic[(that is, "adding" this change to the existing commit)]\n` +
       `and also changing the commit message to "msg[${EXPECTED_MESSAGE}]"`
     );
   }

@@ -17,7 +17,7 @@ export const TAGS = {
   nb: (txt: string) => chalk.underline(chalk.bold(chalk.red(txt))),
   stress: (txt: string) => chalk.italic(chalk.underline(txt)),
   title: (txt: string) => chalk.bold(chalk.underline(txt)),
-  bold: chalk.bold,
+  bld: chalk.bold,
   italic: chalk.italic,
   under: chalk.underline,
 };
