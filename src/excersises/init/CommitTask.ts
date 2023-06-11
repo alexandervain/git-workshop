@@ -9,7 +9,7 @@ const COMMIT_MESSAGE = "Very first commit";
 export class CommitTask implements ExcerciseTask {
   public constructor(private readonly context: Exercise1Context) {}
 
-  public readonly description = `commit the added changes (new file) to git with message "msg${COMMIT_MESSAGE}]"`;
+  public readonly description = `commit the added changes (new file) to git with message "msg[${COMMIT_MESSAGE}]"`;
 
   public get hints(): Hint[] {
     return [
