@@ -1,5 +1,6 @@
 import { factory as amendEx } from "./amend";
 import { factory as checkoutEx } from "./checkout";
+import { factory as cpEx } from "./cherry-pick";
 import { factory as msgEx } from "./commitMessage";
 import { factory as deleteEx } from "./delete";
 import { factory as fixupEx } from "./fixup";
@@ -27,4 +28,5 @@ export const excersises = [
   resetSoftEx,
   resetHardEx,
   checkoutEx,
+  cpEx,
 ].map((factory, index) => factory(createContext(index + 1)));
