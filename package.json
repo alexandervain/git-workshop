@@ -1,7 +1,12 @@
 {
   "name": "git-workshop",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Git commands workshop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandervain/git-workshop.git",
+    "directory": ""
+  },
   "bin": {
     "gw": "bin/cli.js"
   },
