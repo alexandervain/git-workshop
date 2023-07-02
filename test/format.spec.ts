@@ -1,4 +1,4 @@
-import { format, TAGS } from "../src/excersises/format";
+import { format, TAGS } from "../src/exercises/format";
 
 describe("Format", () => {
   it("should return text without tags as is", async () => {

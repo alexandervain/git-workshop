@@ -2,8 +2,8 @@ import { Command, program } from "commander";
 import { inspect } from "node:util";
 import * as shelljs from "shelljs";
 
-import { excersises } from "./excersises";
-import { format } from "./excersises/format";
+import { exercises } from "./exercises";
+import { format } from "./exercises/format";
 import { mainActions } from "./main";
 
 shelljs.config.silent = true;
@@ -13,37 +13,37 @@ interface HasMessage {
 }
 
 const start = new Command("start").description(
-  "start an exersice - pass the execrise number as a parameter"
+  "start an exercise - pass the execrise number as a parameter"
 );
 
 const restart = new Command("restart").description(
-  "restart an exersice - pass the execrise number as a parameter"
+  "restart an exercise - pass the execrise number as a parameter"
 );
 
 const check = new Command("check").description(
-  "check an exersice - pass the execrise number as a parameter"
+  "check an exercise - pass the execrise number as a parameter"
 );
 
 const solution = new Command("solution").description(
-  "show a solution for an exersice - pass the execrise number as a parameter"
+  "show a solution for an exercise - pass the execrise number as a parameter"
 );
 
 const clean = new Command("clean").description(
-  "clean up after an exersice - pass the execrise number as a parameter"
+  "clean up after an exercise - pass the execrise number as a parameter"
 );
 
 const print = new Command("print")
   .action(() => {
-    console.log(format(`title[Excersices]:`));
-    excersises.forEach((ex) => {
+    console.log(format(`title[Exercises]:`));
+    exercises.forEach((ex) => {
       console.log(`  - ${ex.start.description()}`);
     });
   })
   .description(
-    "prints exersice details - pass the execrise number as a parameter"
+    "prints exercise details - pass the execrise number as a parameter"
   );
 
-excersises.forEach((ex) => {
+exercises.forEach((ex) => {
   start.addCommand(ex.start);
   restart.addCommand(ex.restart);
   check.addCommand(ex.check);
@@ -54,9 +54,9 @@ excersises.forEach((ex) => {
 
 print.addCommand(
   new Command("all")
-    .description("print description of all the excersices")
+    .description("print description of all the exercises")
     .action(() => {
-      excersises.forEach((ex) => {
+      exercises.forEach((ex) => {
         ex.printDescription();
       });
     })
@@ -64,9 +64,9 @@ print.addCommand(
 
 clean.addCommand(
   new Command("all")
-    .description("print description of all the excersices")
+    .description("print description of all the exercises")
     .action(async () => {
-      await Promise.all(excersises.map((ex) => ex.cleanup()));
+      await Promise.all(exercises.map((ex) => ex.cleanup()));
     })
 );
 
